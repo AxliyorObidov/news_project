@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %} Mahalliy habarlar {% endblock title %}
+
+{% block content %}
+
+    {% for news in mahalliy_yangiliklar %}
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-8">
+                    <a href="{{news.get_absolute_url}}">
+                    <img src="{{ news.image.url }}" alt="" style="width:50%">
+                    <h4>{{ news.title | truncatewords:5  }}</h4>
+                     </a>
+                </div>
+            </div>
+        </div>
+
+    {% endfor %}
+
+{% endblock content %}
