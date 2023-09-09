@@ -4,9 +4,15 @@
     {% block content %}
     <h2>{{news.title }}</h2>
     <h5>{{ news.publish_time }}</h5>
+    <p>{{ news.category }}</p>
     <img src="{{ news.image.url}}" alt="#">
-    <p> {{ news.body }}</p>
-
-
     <p>{{ news.body | linebreaks }}</p>
+
+<div class="card-footer text-center  ">
+    <a href="{% url 'news_update' news.slug %}">Tahrirlash</a>
+    <a href="{% url 'news_update' news.slug %}">O'chirish</a>
+</div>
+
+
+
     {% endblock content %}
