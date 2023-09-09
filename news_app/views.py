@@ -209,4 +209,10 @@ class NewsUpdateView(UpdateView):
 class NewsDeleteView(DeleteView):
     model = News
     template_name = 'crud/news_delete.html'
-    success_url = reverse_lazy('home_page')
+    success_url = reverse_lazy('index_page')
+
+
+class NewsCreateView(CreateView):
+    model = News
+    template_name = 'crud/news_create.html'
+    fields = ('title', 'slug', 'body', 'image', 'category', 'status')

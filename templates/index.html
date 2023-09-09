@@ -50,7 +50,7 @@
                 <li>
                   <figure class="bsbig_fig"> <a href="{{ mahalliy.get_absolute_url }}" class="featured_img"> <img alt="" src="{{mahalliy.image.url}}"> <span class="overlay"></span> </a>
                     <figcaption> <a href="{{ mahalliy.get_absolute_url }}">{{mahalliy.title | truncatewords:4}}</a> </figcaption>
-                    <p>{{mahalliy.title}}</p>
+                    <p>{{mahalliy.body | truncatewords:6}}</p>
                   </figure>
                 </li>
                     {% endif %}

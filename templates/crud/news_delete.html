@@ -4,10 +4,11 @@
 {% block title %} {{ news.title }} {% endblock title %}
 
 {% block content %}
+<div>
     <h2 class="text-center">Joriy yangilikni o'chirish</h2>
     <form method="post">{% csrf_token %}
     <p>{{ news.title | truncatewords:3 }}... sarlavhali yangilikni o'chirmoqchimisiz </p>
      <button type="submit" class="btn btn-danger ml-2">Tasdiqlayman</button>
     </form>
-
+</div>
 {% endblock content %}
